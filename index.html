@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <!--GOOGLE FONTS-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <!--CSS -->
+  <link rel="stylesheet" href="css/main.css">
+  
+  <title>Frontend Mentor | GitHub user search app</title>
+</head>
+<body id="body" class="ligth">
+  <header>
+    <div class="logo-container">
+      <a class="logo-link" href="./">
+        <p class="logo">devfinder</p>
+      </a>
+    </div>
+    <div id="dark-light-mode" class="dark-light-mode">
+      <p class="dark-light-txt">DARK</p>
+      <img id="moon-sun-icon" class="moon-icon" src="./assets/icon-moon.svg" alt="Dark Mode">
+    </div>
+  </header>
+
+  <div class="search-container">
+    <img class="search-icon" src="./assets/icon-search.svg" alt="">
+    <input class="search-input" type="search" name="" id="search-user" placeholder="Search GitHub username…" >
+    <span id="err-msg" class="no-result no-display">No results</span>
+    <input class="search-btn" type="button" value="Search" onclick="searchUser()">
+  </div>
+
+  <div class="card-container">
+
+    <div class="sub-card-container">
+
+      <div class="card-heading">
+        <div class="user-profile-picture-container">
+          <img id="user-img" class="user-profile-picture" src="https://avatars.githubusercontent.com/u/583231?v=4" alt="">
+        </div>
+        <div class="user-info-heading">
+          <p class="user-name">The Octocat</p>
+          <p class="user-tag">@octocat</p>
+          <p class="user-date">Joined 25 Jan 2011</p>
+        </div>
+      </div>
+  
+      <p class="user-description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.</p>
+      <div class="numbers-section">
+        <div class="numbers-container">
+          <p class="numbers-heading">Repos</p>
+          <p class="number">8</p>
+        </div>
+        <div class="numbers-container">
+          <p class="numbers-heading">Followers</p>
+          <p class="number">3938</p>
+        </div>
+        <div class="numbers-container">
+          <p class="numbers-heading">Following</p>
+          <p class="number">9</p>
+        </div>
+      </div>
+
+      <div class="contact-section">
+        <div class="contact-container">
+          <object
+              id="contact-svg"
+              class="contact-img"
+              data="./assets/icon-location.svg"
+              type="image/svg+xml"
+          ></object>
+          <p class="contact-txt">San Francisco</p>
+        </div>
+        <div class="contact-container">
+          <object
+              class="contact-img"
+              data="./assets/icon-website.svg"
+              type="image/svg+xml"
+          ></object>
+          <p class="contact-txt contact-link">https://github.blog</p>
+        </div>
+        <div class="contact-container">
+          <object
+              class="contact-img"
+              data="./assets/icon-twitter.svg"
+              type="image/svg+xml"
+          ></object>
+          <p class="contact-txt na">Not Available</p>
+        </div>
+        <div class="contact-container">
+          <object
+              class="contact-img"
+              data="./assets/icon-company.svg"
+              type="image/svg+xml"
+          ></object>
+          <p class="contact-txt">@github</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="./js/app.js"></script>
+  <script src="./js/dark-light-mode.js"></script>
+</body>
+</html>
